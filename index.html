@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfume Shop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">PerfumeShop</div>
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+
+    <!-- Sliding Sidebar Menu -->
+    <nav id="sidebar" class="sidebar">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <span class="close" id="closeSidebar">&times;</span>
+    </nav>
+
+    <section class="hero" id="home">
+      <div>
+        <h1>Discover Your Signature Scent</h1>
+        <p>Explore premium perfumes for every mood and style</p>
+      </div>
+    </section>
+
+    <section class="products" id="products">
+      <div class="product">
+        <img src="perfume-1.jpg" alt="Floral Essence" />
+        <h3>Floral Essence</h3>
+        <p>Delicate floral fragrance for everyday elegance</p>
+        <p class="price">$49.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="perfume-2.webp" alt="Ocean Breeze" />
+        <h3>Ocean Breeze</h3>
+        <p>Fresh aquatic scent reminiscent of the sea</p>
+        <p class="price">$59.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="perfume-3.webp" alt="Sweet Vanilla" />
+        <h3>Sweet Vanilla</h3>
+        <p>Warm and sweet fragrance perfect for cozy nights</p>
+        <p class="price">$39.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="perfume-4.webp" alt="Citrus Delight" />
+        <h3>Citrus Delight</h3>
+        <p>Bright and zesty scent to energize your day</p>
+        <p class="price">$44.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <p>&copy; 2025 PerfumeShop. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const sidebar = document.getElementById("sidebar");
+      const closeSidebar = document.getElementById("closeSidebar");
+
+      hamburger.addEventListener("click", () => {
+        sidebar.style.width = "250px";
+      });
+
+      closeSidebar.addEventListener("click", () => {
+        sidebar.style.width = "0";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === sidebar) sidebar.style.width = "0";
+      });
+    </script>
+  </body>
+</html>
